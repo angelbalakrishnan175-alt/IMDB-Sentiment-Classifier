@@ -164,6 +164,12 @@ model = MultinomialNB(alpha=0.5)
 
 # Train the model using TF-IDF features
 model.fit(X_train_tfidf, y_train)
+import joblib
+
+joblib.dump(model, "sentiment_model.pkl")
+joblib.dump(tfidf, "tfidf_vectorizer.pkl")
+
+print("Model and vectorizer saved successfully!")
 
 # Predict sentiment for test reviews
 y_pred = model.predict(X_test_tfidf)
