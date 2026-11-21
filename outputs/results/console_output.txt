@@ -1,0 +1,97 @@
+Dataset loaded successfully!
+Dataset shape: (50000, 2)
+
+First five reviews:
+                                              review sentiment
+0  One of the other reviewers has mentioned that ...  positive
+1  A wonderful little production. <br /><br />The...  positive
+2  I thought this was a wonderful way to spend ti...  positive
+3  Basically there's a family where a little boy ...  negative
+4  Petter Mattei's "Love in the Time of Money" is...  positive
+
+--- DATASET EXPLORATION ---
+Total reviews: 50000
+
+Sentiment distribution:
+sentiment
+positive    25000
+negative    25000
+Name: count, dtype: int64
+
+Sentiment percentages:
+sentiment
+positive    50.0
+negative    50.0
+Name: proportion, dtype: float64
+
+Majority baseline accuracy: 50.0
+
+Word count statistics:
+Mean: 231.15694
+Median: 173.0
+Mode: [127]
+Variance: 29358.765405144506
+Standard deviation: 171.34399728366472
+Skewness: 2.1683033583491094
+
+Mean word count by sentiment:
+sentiment
+negative    229.46456
+positive    232.84932
+Name: word_count, dtype: float64
+
+Duplicate rows: 418
+
+--- TEXT PREPROCESSING ---
+Time for 1,000 reviews: 6.59 seconds
+Empty cleaned reviews: 0
+
+--- DATA SPLITTING ---
+Training samples: 40000
+Testing samples: 10000
+
+--- TF-IDF ---
+Training feature shape: (40000, 50000)
+Testing feature shape: (10000, 50000)
+
+--- MODEL TRAINING ---
+Model training completed successfully!
+
+Model Accuracy: 88.63 %
+Baseline Accuracy: 50.0 %
+
+--- CLASSIFICATION REPORT ---
+              precision    recall  f1-score   support
+
+    negative       0.89      0.88      0.89      5000
+    positive       0.88      0.89      0.89      5000
+
+    accuracy                           0.89     10000
+   macro avg       0.89      0.89      0.89     10000
+weighted avg       0.89      0.89      0.89     10000
+
+
+--- CONFUSION MATRIX ---
+[[4391  609]
+ [ 528 4472]]
+
+--- TOP 20 WORDS BY SENTIMENT ---
+
+Top 20 terms for NEGATIVE reviews:
+['movie' 'film' 'not' 'one' 'like' 'bad' 'no' 'even' 'would' 'good' 'time'
+ 'character' 'could' 'really' 'get' 'make' 'scene' 'see' 'acting' 'plot']
+
+Top 20 terms for POSITIVE reviews:
+['film' 'movie' 'one' 'not' 'great' 'good' 'like' 'time' 'story' 'see'
+ 'character' 'well' 'also' 'love' 'really' 'best' 'get' 'life' 'make'
+ 'would']
+
+--- TOP BIGRAMS ---
+
+Top bigrams for NEGATIVE
+['look like' 'ever seen' 'waste time' 'movie ever' 'worst movie'
+ 'special effect' 'not even' 'bad movie' 'movie not' 'one worst']
+
+Top bigrams for POSITIVE
+['one best' 'even though' 'first time' 'great movie' 'ever seen'
+ 'film not' 'movie not' 'see movie' 'new york' 'good movie']
